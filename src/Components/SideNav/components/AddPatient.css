@@ -1,0 +1,35 @@
+.addPatient {
+    width: 170px;
+    height: 175px;
+    background: #878787;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    gap: .6rem;
+}
+
+.addPatient img {
+    height: 5rem;
+    transition: all 0.3s linear;
+    mix-blend-mode: darken;
+    background: none;
+}
+
+.addPatient img:hover {
+    filter: drop-shadow(0 0 10px #8447e7);
+    transform: translateY(8px);
+}
+
+.addPatient img:active {
+    transform: scale(0.9);
+}
+
+.addPatient h3 {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-top: .8rem;
+}

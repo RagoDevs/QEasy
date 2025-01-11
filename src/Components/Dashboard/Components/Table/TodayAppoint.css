@@ -1,0 +1,90 @@
+.table{
+    margin-top: 1rem;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+   
+}
+
+.table--header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.table--header h3{
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #6e26e0;
+}
+
+.input--group {
+    width: 40%;
+    height: 2.5rem;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0 0 1.2rem 0;
+    
+}
+
+.input--group input {
+    width: 100%;
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.input--group img {
+    height: 1.5rem;
+    padding-right: 0.9rem;
+}
+.table--body {
+    width: 100%;
+    background-color: white;
+    border-radius: 28px;
+    border-collapse: collapse;
+    scroll-behavior: smooth;
+    height: 48vh;
+    overflow: auto;
+    -webkit-box-shadow: 1px 10px 28px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 10px 28px -9px rgba(0,0,0,0.75);
+     box-shadow: 1px 10px 28px -9px rgba(252, 250, 250, 0.959);
+     background-color: #fdfdfd;
+}
+
+.table--body::-webkit-scrollbar{
+    width: 0.1rem;
+    height: 0.1rem;
+    
+}
+
+
+.table, th, td {
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid #dddd;
+}
+
+.table table thead th{
+    position: sticky;
+    border-bottom: 1px solid black;   
+}
+
+thead th {
+    border-bottom: 1px solid black;
+    background-color: #f6f9fc;
+    position: sticky;
+    top: 0;
+}
+
+tr:hover td {
+   color: #6203fa; 
+   cursor: pointer;
+   background-color: #f6f9fc;
+}
