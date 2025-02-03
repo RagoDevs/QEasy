@@ -1,10 +1,20 @@
-import React from "react";
-
+import { useState } from "react";
 import login from '../../Assets/Images/login.png'
 import './Loginsignin.css'
+import { useNavigate } from "react-router-dom";
 
 
 function LogInAndsignIn() {
+
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
+    const navigate = useNavigate();
+
+    const handlesubmit = (e) => {
+        e.preventDefault();
+        navigate('/dashboard')
+    }
 
     /*let auth = useAuth();
     const formik = useFormik({
@@ -35,43 +45,29 @@ function LogInAndsignIn() {
                     <img src={login} alt="loginimage" />
                 </div>
 
-                <div className='loginsignin'>
-                    <div className='login--text'>
-                        <h5>Welcome Back!</h5>
-
-                    </div>
-                    <form >
-                        <div className='login--inputs'>
-
+                <div className="login-container">
+                    <div className="logo">Welcome Back</div>
+                    <form onSubmit={handlesubmit}>
+                        <div className="inputs">
                             <input
-                                type='email'
-                                className='input'
-                                placeholder='Email'
-                                name='email'
-                               /* value={formik.values.email}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}*/
+                                type="text"
+                                placeholder="Username"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                
                             />
-                            
-                            
                             <input
-                                type='password'
-                                className='input'
-                                placeholder='Password'
-                                name='password'
-                               /* value={formik.values.password}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}*/
+                                type="password"
+                                placeholder="Password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                
                             />
-                            
-
-                            <div className='forgot--password'> Forgot Password?</div>
-                            <button
-                                type='submit'
-                                className='submit'
-                            >
-                                Login
-                            </button>
+                            <button className="btn" type="submit" >Login</button>
+                            <div className="links">
+                                <p>Forgot Password?</p> |
+                                <p>Create Account</p>
+                            </div>
                         </div>
                     </form>
                 </div>

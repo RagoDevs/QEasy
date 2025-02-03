@@ -10,25 +10,27 @@ import Chart from '../../Components/Dashboard/Components/Chart/Chart';
 function Dashboard() {
     return (
         <>
-            <div className="dashboard">
-                <div className="sidenav">
-                    <SideNav />
-                </div>
-                <div className="dash-main">
-                    <div className="dash-header">
-                        <h2>Overview</h2>
-                        <p>Stats</p>
+            <div className="screen-container">
+                <div className="dashboard">
+                    <div className="sidenav">
+                        <SideNav />
                     </div>
-                    <div className="dash-cards">
-                        <Cards />
-                    </div>
-                    <div className="dash-table">
-                        <TodayAppoint />
-                    </div>
-                    <div className="right-bar">
-                        <div className="rightbar-container">
-                            <CalenderComp />
-                            <Chart />
+                    <div className="dash-main">
+                        <div className="dash-header">
+                            <h2>Overview</h2>
+                            <p>Stats</p>
+                        </div>
+                        <div className="dash-cards">
+                            <Cards />
+                        </div>
+                        <div className="dash-table">
+                            <TodayAppoint />
+                        </div>
+                        <div className="right-bar">
+                            <div className="rightbar-container">
+                                <CalenderComp />
+                                <Chart />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,9 +1,19 @@
-.dashboard {
+.screen-container {
     width: 100%;
-    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.dashboard {
+    width: 900px;
+    height: 100%;
     
     display: grid;
-    grid-template-columns: 18.5rem 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 100vh;
+
 }
 
 .sidenav {
@@ -16,8 +26,8 @@
     background-color: #efeded;
 
     display: grid;
-    grid-template-columns: 4fr 2fr;
-    grid-template-rows: 5rem auto 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5rem auto auto;
     gap: .7rem;
 }
 
@@ -66,7 +76,6 @@
 
 .rightbar-container {
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -76,4 +85,17 @@
     -webkit-box-shadow: 1px 10px 28px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 10px 28px -9px rgba(0,0,0,0.75);
      box-shadow: 1px 10px 28px -9px rgba(0,0,0,0.75);
+}
+
+
+
+@media screen and (max-width: 1100px) {
+
+    .dash-main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .right-bar {
+        display: none;
+    }
 }

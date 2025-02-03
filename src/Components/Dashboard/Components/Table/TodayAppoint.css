@@ -1,18 +1,12 @@
-.table{
-    margin-top: 1rem;
-
-}
 
 table {
     border-collapse: collapse;
     width: 100%;
-   
 }
 
 .table--header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
 }
 
 .table--header h3{
@@ -46,11 +40,11 @@ table {
 }
 .table--body {
     width: 100%;
+    max-height: 461px;
     background-color: white;
     border-radius: 28px;
     border-collapse: collapse;
     scroll-behavior: smooth;
-    height: 48vh;
     overflow: auto;
     -webkit-box-shadow: 1px 10px 28px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 10px 28px -9px rgba(0,0,0,0.75);
