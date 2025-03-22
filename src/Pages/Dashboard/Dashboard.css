@@ -1,33 +1,35 @@
 .screen-container {
     width: 100%;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
-
-
+    overflow: hidden;
+    background-color: #efeded;
 }
 .dashboard {
-    width: 900px;
+    width: 1400px;
     height: 100%;
     
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: 100vh;
+    grid-template-rows: 1fr;
 
 }
 
 .sidenav {
     grid-column: 1;
+    z-index: 100;
 }
 
 .dash-main {
     grid-column: 2;
-    padding: 1.5rem .3rem 1rem 2rem;
-    background-color: #efeded;
+    padding: 1rem;
+  
 
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 5rem auto auto;
+    grid-template-rows: auto auto auto;
     gap: .7rem;
 }
 
@@ -54,6 +56,10 @@
     font-weight: 500;
 }
 
+.dash-header img {
+    display: none;
+}
+
 .dash-cards {
     grid-column: 1;
     grid-row: 2;
@@ -63,6 +69,7 @@
     grid-column: 1;
     grid-row: 3;
     overflow: scroll;
+    z-index: 1;
 }
 .dash-table::-webkit-scrollbar {
     display: none;
@@ -91,10 +98,34 @@
 
 @media screen and (max-width: 1100px) {
 
-    .dash-main {
+    .dashboard {
         display: grid;
         grid-template-columns: 1fr;
     }
+
+    .sidenav {
+        width: 250px;
+        height: 50px;
+        
+    }
+    
+    .dash-main {
+        grid-column: 1;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .screen-container {
+        overflow: scroll;
+    }
+
+    .dash-main {
+        display: grid;
+
+        grid-template-columns: 1fr;
+    }
+
     .right-bar {
         display: none;
     }

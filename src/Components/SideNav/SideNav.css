@@ -1,74 +1,149 @@
-.side-nav {
-    width: 18rem;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    background: rgb(103,23,205);
-    background: linear-gradient(-10deg, rgba(103,23,205,1) 35%, rgba(40,113,250,1) 100%);
+.menu-btn {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.menu-btn img {
+    height: 2.8rem;
+}
+
+.close-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.close-btn img {
+    height: 1.8rem;
+    margin: 1.8rem ;
 }
 
 .sidebar--image {
-    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-top: 4.5rem;
+    justify-content: space-between;
+}
+.side-nav {
+  width: 18rem;
+  height: 95dvh;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: rgb(103, 23, 205);
+  background: linear-gradient(
+    -10deg,
+    rgba(103, 23, 205, 1) 35%,
+    rgba(40, 113, 250, 1) 100%
+  );
+  transition: transform 0.3s ease-in-out;
+  border-radius: 18px;
+}
+
+.side-nav .show {
+    width: 100dvw;
+    height: 100dvh;
+    backdrop-filter: blur(3px);
+}
+.sidebar--image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
 }
 
 .sidebar--image img {
-   width: 200px;
+  width: 200px;
 }
 
 .sidebar--image h2 {
-    color: white;
-    font-family: poppins;
-    margin-top: .5rem;
+  color: white;
+  font-family: poppins;
+  margin-top: 0.5rem;
 }
 
 .side-menu {
-    width: 100%;
-    margin-top: 3rem;
+  width: 100%;
+  margin-top: 2rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .menu-item {
-    width: 98%;
+  width: 98%;
 
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .menu-item:hover {
-    background: rgb(10, 112, 207);
+  background: rgb(10, 112, 207);
 }
 
 .menu-item h4 {
-    color: white;
-    font-family: sans-serif;
-    font-weight: 500;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 500;
 }
 
 .active {
-    width: 90%;
-    background: rgb(10, 112, 207);
-    border-radius: 8px;
+  width: 90%;
+  background: rgb(10, 112, 207);
+  border-radius: 8px;
 }
 
 .inactive {
-    width: 90%;
+  width: 90%;
 }
 
 .addpatient-container {
-    width: 100%;
-    margin-top: 4.5rem;
+  width: 100%;
+  margin-top: 1.7rem;
 
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1100px) {
+
+    .side-nav {
+        transform: translateX(-100%); /* Initially Hidden */
+        width: 250px;
+        z-index: 101;
+    }
+    .side-nav.show {
+        transform: translateX(0);
+    }
+    .close-btn {
+        display: flex;
+        justify-content: end;
+    }
+    .menu-btn {
+        display: block;
+    }
+
+    .overlay-bg {
+        backdrop-filter: blur(3px);
+        width: 100dvw;
+        height: 100dvh;
+    }
+   
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        display: block;
+
+    }
 }

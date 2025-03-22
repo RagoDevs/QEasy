@@ -1,13 +1,13 @@
-import React from 'react';
 import './Dashboard.css'
-import SideNav from '../../Components/SideNav/SideNav'
 import Cards from '../../Components/Dashboard/Components/Cards/Cards'
 import TodayAppoint from '../../Components/Dashboard/Components/Table/TodayAppoint'
 import CalenderComp from '../../Components/Dashboard/Components/Calendar/CalenderComp'
 import Chart from '../../Components/Dashboard/Components/Chart/Chart';
+import SideNav from '../../Components/SideNav/SideNav';
 
 
 function Dashboard() {
+
     return (
         <>
             <div className="screen-container">
