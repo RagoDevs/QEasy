@@ -106,7 +106,7 @@
 
 .addpatient-container {
   width: 100%;
-  margin-top: 1.7rem;
+  margin-top: 1.4rem;
 
   display: flex;
   justify-content: center;
@@ -128,6 +128,10 @@
     }
     .menu-btn {
         display: block;
+    }
+
+    .sidebar--image {
+        margin-top: 1.5rem;
     }
 
     .overlay-bg {
