@@ -98,3 +98,16 @@
 .links p:hover {
     text-decoration: underline;
 }
+
+media (max-width: 900px) {
+    .loginandsignin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    .login--header {
+    display: none;
+    }
+}
+  
